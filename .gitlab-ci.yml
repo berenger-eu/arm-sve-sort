@@ -13,7 +13,7 @@ code-coverage:
     - wget https://gitlab.inria.fr/bramas/farm-sve/-/raw/master/farm_sve.h?inline=false -O arm_sve.h
     - CXX=g++ CXXFLAGS="-g -O0 --coverage -DNDEBUG -I." MARCH="native" source build-script.sh
     - ./sortSVEtest.g++.exe
-    - lcov --directory CMakeFiles/ -c --output-file coverage-rapport.info
+    - lcov --directory ./ -c --output-file coverage-rapport.info
     - lcov --list coverage-rapport.info
     - genhtml -o ./coverage -t "Coverage arm sve" coverage-rapport.info
   artifacts:
