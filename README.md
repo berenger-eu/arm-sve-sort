@@ -9,7 +9,7 @@ The code provides sort functions to small arrays (<= 16 SVE vectors), for larger
 The code also have two versions, one is following the SVE phylosophy by working for any vector size (known at runtime), whereas the second version (postfix "512") works only if the vectors are of size 512bits.
 This 512bits version is a pure copy of the AVX512 sort (code: https://gitlab.inria.fr/bramas/avx-512-sort paper: http://thesai.org/Publications/ViewPaper?Volume=8&Issue=10&Code=IJACSA&SerialNo=44).
 
-The paper that describes the current ARM SVE sort is available as a preprint at: TODO
+The paper that describes the current ARM SVE sort is available as a preprint at: https://hal.inria.fr/hal-03227631
 
 # What if you do not have SVE but would like to test the code
 
@@ -61,6 +61,18 @@ Note that `SortSVEkv` supports both two arrays for keys/values or one array of p
 
 # Citing
 
-Refer to the preprint:
-TODO
+Refer to the preprint https://hal.inria.fr/hal-03227631:
+```
+@unpublished{bramas:hal-03227631,
+  TITLE = {{A fast vectorized sorting implementation based on the ARM scalable vector extension (SVE)}},
+  AUTHOR = {Bramas, B{\'e}renger},
+  URL = {https://hal.inria.fr/hal-03227631},
+  NOTE = {working paper or preprint},
+  YEAR = {2021},
+  MONTH = May,
+  PDF = {https://hal.inria.fr/hal-03227631/file/svesort.pdf},
+  HAL_ID = {hal-03227631},
+  HAL_VERSION = {v1},
+}
+```
 
