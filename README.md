@@ -36,7 +36,7 @@ $CXX -DNDEBUG -O3 -march=$MARCH+sve -fopenmp sortSVEtest.cpp -o sortSVEtest.exe
 ## Supported compilers
 
 - arm/20.3 (armclang++): works
-- gcc/11-20210321 (g++): cannot compile (the backend complains about unknown instructions and crashes)
+- gcc/11.1.0 (g++) : works (with version 11-20210321 I cannot compile the backend complains about unknown instructions and crashes)
 - fujitsu-compiler/4.3.1 (FCC): cannot compile (internal compiler error with old code version, and unsupported tuple management with new code version)
 - cce-sve/10.0.1 (CC): cannot compile "Unable to find cray-libsci/20.09.1.1 libraries compatible with cce/10.0.1." but cce is there! Note that the arch selection is different (-hcpu=native)
 
