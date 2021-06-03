@@ -24,6 +24,6 @@ cd "results/$TIMESTAMP-$CXX"
 echo "taskset -c 0 ~/arm-sve-sort/sortSVEperf.$CXX.exe seq > res.txt"
 taskset -c 0 ~/arm-sve-sort/sortSVEperf.$CXX.exe seq > res.txt
 
-echo "OMP_NUM_THRADS=48 OMP_PROC_BIND=TRUE OMP_WAIT_POLICY=ACTIVE ~/arm-sve-sort/sortSVEperf.$CXX.exe par > res.txt"
-OMP_NUM_THRADS=48 OMP_PROC_BIND=TRUE OMP_WAIT_POLICY=ACTIVE ~/arm-sve-sort/sortSVEperf.$CXX.exe par > res.txt
+echo "OMP_NUM_THREADS=48 OMP_PROC_BIND=TRUE OMP_WAIT_POLICY=ACTIVE ~/arm-sve-sort/sortSVEperf.$CXX.exe par > res.txt"
+OMP_NUM_THREADS=48 OMP_PROC_BIND=TRUE OMP_WAIT_POLICY=ACTIVE ~/arm-sve-sort/sortSVEperf.$CXX.exe par > res.txt
 
