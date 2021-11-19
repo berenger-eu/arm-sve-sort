@@ -9,8 +9,7 @@ The code provides sort functions to small arrays (<= 16 SVE vectors), for larger
 The code also have two versions, one is following the SVE phylosophy by working for any vector size (known at runtime), whereas the second version (postfix "512") works only if the vectors are of size 512bits.
 This 512bits version is a pure copy of the AVX512 sort (code: https://gitlab.inria.fr/bramas/avx-512-sort paper: http://thesai.org/Publications/ViewPaper?Volume=8&Issue=10&Code=IJACSA&SerialNo=44).
 
-The paper that describes the current ARM SVE sort is available as a preprint at: https://hal.inria.fr/hal-03227631
-It has been accepted at PeerJ CS and will appear soon.
+The paper that describes the current ARM SVE sort is available at: https://peerj.com/articles/cs-769/
 
 # What if you do not have SVE but would like to test the code
 
